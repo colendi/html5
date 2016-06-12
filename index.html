@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Reproductor de Video</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body>
+	<section id="reproductor">
+		<video id="medio" width="720" height="400">
+			<source src="http://video1.e-kolumbus.de/Rundreise CostaRica Chamaeleon.mp4">
+		</video>
+		<nav>
+			<div id="botones">
+				<button type="button" id="reproducir">Reproducir</button>
+			</div>
+			<div id="contador">
+				<span id="tiempoActual">00:00</span>
+				&nbsp;/&nbsp;
+				<span id="tiempoTotal"></span>
+			</div>
+			<div id="barra">
+				<div id="progreso"></div>
+			</div>
+			<div style="clear: both"></div>
+		</nav>
+	</section>
+</body>
+</html>
