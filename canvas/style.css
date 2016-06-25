@@ -1,0 +1,21 @@
+body {text-align: center;background-color: #eee;}
+header, section, footer, aside, nav, article, figure, figcaption,hgroup{display: block;}
+
+#cajalienzo{
+	text-align: left;
+	margin: 20px auto;
+	padding: 5px;
+	width: 720px;
+	border: 1px solid #666666;
+	background-color: white;
+	
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ie-border-radius: 10px;
+}
+
+#lienzo{
+	border: 1px solid black;
+}
