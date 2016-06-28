@@ -6,4 +6,32 @@ header, section, footer, aside, nav, article, figure, figcaption, hgroup{
 	display: block;
 }
 
+#location{
+	text-align: left;
+	width: 1000px;
+	height: 600px;
+	background-color: #eee;
+	margin: 0 auto;
+	border-radius: 5px;
+	padding: 5px;
+	border: 1px solid #aaa;
+	box-shadow: rgb(150,150,150) 1px 1px;
+	box-sizing: border-box;
+}
+
+#log{
+	background-color: #fff;
+	box-sizing: border-box;
+	border: 1px solid #aaa;
+	margin-top: 10px;
+	min-height: 50px;
+	padding:5px;
+}
+
+#map{
+	margin-top: 10px;
+	height: 400px;
+	widows: 100%;
+}
+
 .clear{clear: both;}
