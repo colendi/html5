@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>Form</title>
+	<link rel="stylesheet" href="style.css" />
+	
+	<script>
+function iniciar(){
+edad=document.getElementById("miedad");
+edad.addEventListener("change", cambiarrango, false);
+document.informacion.addEventListener("invalid",
+validacion, true);
+document.getElementById("enviar").addEventListener("click",
+enviar, false);
+document.informacion.addEventListener("input", controlar,
+false);
+}
+function cambiarrango(){
+var salida=document.getElementById("rango");
+var calc=edad.value-20;
+if(calc<20){
+calc=0;
+edad.value=20;
+}
+salida.innerHTML=calc+' a '+edad.value;
+}
+function validacion(e){
+var elemento=e.target;
+elemento.style.background='#FFDDDD';
+}
+function enviar(){
+var valido=document.informacion.checkValidity();
+if(valido){
+document.informacion.submit();
+}
+}
+function controlar(e){
+var elemento=e.target;
+if(elemento.validity.valid){
+elemento.style.background='#FFFFFF';
+}else{
+elemento.style.background='#FFDDDD';
+}
+}
+window.addEventListener("load", iniciar, false);
+</script>
+</head>
+<body>
+	<section>
+		Búsqueda (fuera de form): <input type="search" name="busqueda2" id="busqueda2" form="miformulario">
+		<br/>
+		<form name="miformulario" id="miformulario" method="get" autocomplete="off" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+			text: <input type="text" name="nombre" id="nombre">
+			<br/>
+			
+			email: <input type="email" name="miemail" id="miemail" formnovalidate="formnovalidate" placeholder="e-mail">
+			<br/>
+			
+			search: <input type="search" name="busqueda" id="busqueda" oninput="console.info('oninput');" onchange="console.info('onchange');">
+			<br/>
+			
+			url: <input type="url" name="miurl" id="miurl" >
+			<br/>
+			
+			tel: <input type="tel" name="telefono" id="telefono">
+			<br/>
+			
+			number: <input type="number" name="numero" id="numero" min="0" max="10" step="5" autofocus>
+			<br/>
+			
+			range: <input type="range" name="numero" id="numero" min="0" max="10" step="1" value="0"> 
+			<br/>
+			
+			date: <input type="date" name="fecha" id="fecha">
+			<br/>
+			
+			week: <input type="week" name="semana" id="semana">
+			<br/>
+			
+			month: <input type="month" name="mes" id="mes" translate="yes">
+			<br/>
+			
+			time: <input type="time" name="hora" id="hora">
+			<br/>
+			
+			datetime: <input type="datetime" name="fechahora" id="fechahora">
+			<br/>
+			
+			datetime-local: <input type="datetime-local" name="tiempolocal" id="tiempolocal">
+			<br/>
+			
+			color: <input type="color" name="micolor" id="micolor">
+			<br/>
+			
+			C.P. (pattern="^[1-9][0-9]{4}$"): <input pattern="^[1-9][0-9]{4}$" name="codigopostal" id="codigopostal" title="inserte los 5 números de su código postal">
+			<br/><br/>
+			
+			range: <input type="range" id="a" value="50"> + <input type="number" id="b" value="50"> = <output name="x" for="a b"></output>
+			<br/><br/>
+			
+			Tag datalist + Input list="": <input type="text" name="datalist" id="datalist" list="informacion">
+			<br/>
+			<datalist id="informacion">
+				<option value="123123123" label="Teléfono 1">
+				<option value="456456456" label="Teléfono 2">
+			</datalist>
+			
+			Tag progress: <progress value="55" max="100"></progress>
+			<br/>
+			
+			Tag meter: <meter value="2" min="0" max="10">2 out of 10</meter>&nbsp;|&nbsp;<meter value="0.6">60%</meter>
+			<br/>
+			
+			
+			
+			
+			<br/>
+			<input type="submit" value="Enviar">
+		</form>
+	</section>
+	<section>
+		<form name="informacion" method="get">
+			Usuario:
+			<input pattern="[A-Za-z]{3,}" name="usuario" id="usuario" maxlength="10" required>
+			Email:
+			<input type="email" name="miemail" id="miemail" required>
+			Rango de Edad:
+			<input type="range" name="miedad" id="miedad" min="0" max="80" step="20" value="20">
+			<output id="rango">0 a 20</output>
+			<input type="button" id="enviar" value="ingresar">
+		</form>
+	</section>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js.js"></script>
+	<script>
+		$(function(){
+			document.getElementById('usuario').setCustomValidity("javier");
+		})
+	</script>
+</body>
+</html>
