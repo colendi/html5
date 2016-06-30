@@ -7,3 +7,40 @@ header, section, footer, aside, nav, article, figure, figcaption, hgroup{
 }
 
 .clear{clear: both;}
+
+#container{
+	width: 1000px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#container_form{
+	float: left;
+	padding: 0 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+}
+#container_session_storage{
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+	padding: 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+}
+#container_local_storage{
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+	padding: 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+#key, #value{
+	width: 200px;
+}
+#container_storage > div{
+	padding: 5px;
+	border-bottom: 1px solid #999999;
+}

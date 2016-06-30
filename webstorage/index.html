@@ -8,7 +8,28 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<section>
-	</section>
+	<div id="container">
+		<section id="container_form">
+			<form name="form">
+				<p>Clave:<br/><input type="text" name="key" id="key"></p>
+				<p>Valor:<br/><textarea name="value" id="value"></textarea></p>
+				<p>
+					Storage:<br/>
+					<input type="radio" value="session" name="storage" id="session" />Session&nbsp;|&nbsp;<input type="radio" value="local" name="storage" id="local" />Local
+				</p>
+				<p>
+					<input type="button" name="save" id="save" value="Save" />
+					<input type="button" name="remove" id="remove" value="Remove" />
+					<input type="button" name="clear" id="clear" value="Clear" />
+				</p>
+			</form>
+		</section>
+		<section id="container_session_storage">
+			loading session storage...
+		</section>
+		<section id="container_local_storage">
+			loading local storage...
+		</section>
+	</div>
 </body>
 </html>
