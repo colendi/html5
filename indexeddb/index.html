@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<title>API IndexedDB</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="js.js"></script>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div id="container">
+		<section id="container_form">
+			<form name="form">
+				<p>ISBN:<br><input type="text" name="isbn" id="isbn"></p>
+				<p>Title:<br><input type="text" name="title" id="title"></p>
+				<p>Author:<br><input type="text" name="author" id="author"></p>
+				<p>
+					<input type="button" name="save" id="save" value="Save" />
+					&nbsp;<input type="button" name="show" id="show" value="Show" />
+					&nbsp;<input type="button" name="btn_title" id="btn_title" value="Title" />
+					&nbsp;<input type="button" name="btn_all" id="btn_all" value="All" />
+				</p>
+			</form>
+			<p><button id="clear">Clear</button><button id="delete">Delete</button></p>
+		</section>
+		<section id="container_data">
+			There is no info
+		</section>
+		<section id="container_log">
+			<div id="log">
+			</div>
+			<ul>
+				<li><a href="https://www.w3.org/TR/IndexedDB/">https://www.w3.org/TR/IndexedDB/</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB</a></li>
+				<li><a href="http://code.tutsplus.com/tutorials/working-with-indexeddb--net-34673">http://code.tutsplus.com/tutorials/working-with-indexeddb--net-34673</a></li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>

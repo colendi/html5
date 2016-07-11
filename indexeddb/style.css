@@ -1,0 +1,65 @@
+body{
+	text-align: center;
+}
+
+header, section, footer, aside, nav, article, figure, figcaption, hgroup{
+	display: block;
+}
+
+.clear{clear: both;}
+
+#container{
+	width: 1000px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#container_form{
+	float: left;
+	padding: 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	box-shadow: 2px 2px #ccc;
+}
+
+#container_data{
+	float: left;
+	width: 400px;
+	margin-left: 20px;
+	padding: 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	box-shadow: 2px 2px #ccc;
+}
+
+#container_log{
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+	padding: 20px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	box-shadow: 2px 2px #ccc;
+}
+
+#log{
+	padding: 5px;
+	border-radius: 5px;
+	border: 1px solid #999999;
+	min-height: 400px;
+	overflow: scroll;
+}
+
+#log code{
+	float: left;
+	width: 100%;
+	margin-bottom:10px;
+}
+
+#key, #title{
+	width: 200px;
+}
+#container_data > div{
+	padding: 5px;
+	border-bottom: 1px solid #999999;
+}
